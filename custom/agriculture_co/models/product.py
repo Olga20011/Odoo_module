@@ -8,10 +8,11 @@ class Farmer_details(models.Model):
     _name='farmer_details'
     _description='Farmer_Details'
 
-    name=fields.Char(required=True)
-    product_name=fields.Char(string='Product Name')
+    farmer_name=fields.Char(required=True)
+    crop_name=fields.Char(string='Crop Name')
     date_delivered=fields.Datetime('Deliverty date',required=True, default=fields.Datetime.now)
     price_total=fields.Float(string='Amount')
+    quantity_delivered=fields.Integer(string='Quantity')
 
     @api.model
     def create(self, vals):
