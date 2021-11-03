@@ -6,7 +6,11 @@
     'sequence':'10',
     'category': 'Productivity',
     'description': """A module to enable capturing of farmer details including the produce they have delivered.""",
-    'depends': [],
+    'depends':['base'],
+    'data':[
+        'security/security.xml',
+        'security/ir.model.access.scv',
+    ],
     'installable': True,
     'application': True,
     'auto_install': False,
